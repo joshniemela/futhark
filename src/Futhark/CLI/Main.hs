@@ -16,6 +16,7 @@ import Futhark.CLI.Defs qualified as Defs
 import Futhark.CLI.Dev qualified as Dev
 import Futhark.CLI.Doc qualified as Doc
 import Futhark.CLI.Eval qualified as Eval
+import Futhark.CLI.Fmt qualified as Fmt
 import Futhark.CLI.LSP qualified as LSP
 import Futhark.CLI.Literate qualified as Literate
 import Futhark.CLI.Misc qualified as Misc
@@ -51,6 +52,7 @@ commands =
       ("eval", (Eval.main, "Evaluate Futhark expressions passed in as arguments")),
       ("repl", (REPL.main, "Run interactive Read-Eval-Print-Loop.")),
       ("run", (Run.main, "Run a program through the (slow!) interpreter.")),
+      ("fmt", (Fmt.main, "Run the formatter on a file.")),
       ("c", (C.main, "Compile to sequential C.")),
       ("opencl", (OpenCL.main, "Compile to C calling OpenCL.")),
       ("cuda", (CCUDA.main, "Compile to C calling CUDA.")),
